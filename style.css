@@ -6,13 +6,27 @@
   /* place container in the center with auto on sides */
 
   display: grid;
-  grid-template-rows: 150px 150px;
-  grid-template-columns: 150px 150px 150px;
 
-  grid-row-gap: 20px;
+  /* better way to request rows is with repeat */
+  grid-template-rows: repeat(2, 150px);
+  /* grid-template-rows: 150px 150px; */
+
+  /* better way to request columns is with repeat*/
+  /* fr asks to occupy all possible space */
+  /* grid-template-columns: repeat(2, 150px) 1fr; */
+  /* grid-template-columns: 150px 150px 150px; */
+
+  /* way to request columns of the same width*/
+  /* you can do it also in percentages */
+  grid-template-columns: repeat(3, 1fr);
+
   /* gap between grid row items */
-  grid-column-gap: 30px;
+  grid-row-gap: 20px;
   /* gap between grid column items */
+  grid-column-gap: 30px;
+
+  /* gap between both */
+  grid-gap: 80px;
 }
 
 .item {
